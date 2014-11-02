@@ -4,4 +4,4 @@ second (_:x:_) = x
 
 main = do
   print $ second [1..5]
-  print $ second "abcdef"
+  print $ second (drop 2 "abcdef")
