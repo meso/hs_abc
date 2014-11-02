@@ -1,11 +1,10 @@
 module Main where
 
-fact 1 = 1
-fact n = n * fact (n - 1)
-
---fact n
---    | n == 1    = 1
---    | otherwise = n * fact (n - 1)
-
 main = do
-  print $ fact 5
+  print $ "abcde"
+  print $ ['a', 'b', 'c', 'd', 'e']
+  print $ ['a'..'e']
+  print $ 'a':"bcde"
+  print $ 'a':'b':"cde"
+  print $ "abc" ++ "de"
+  print $ "abcde" !! 3
