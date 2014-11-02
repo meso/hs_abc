@@ -9,7 +9,7 @@ take' n (x:xs) = x : take' (n - 1) xs
 
 drop' 0 xs     = xs
 drop' _ []     = []
-drop' n (x:xs) = drop' (n - 1) xs
+drop' n (_:xs) = drop' (n - 1) xs
 
 reverse' []     = []
 reverse' (x:xs) = reverse' xs ++ [x]
@@ -25,7 +25,9 @@ fact' n = product' [1..n]
 main = do
   print $ length' "abcdef"
   print $ take' 3 "abcdef"
+  print $ take' 9 "abcdef"
   print $ drop' 3 "abcdef"
+  print $ drop' 9 "abcdef"
   print $ reverse' "abcdef"
   print $ sum' [1, 2, 3, 4, 5]
   print $ product' [1, 2, 3, 4, 5]
