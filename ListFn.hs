@@ -3,9 +3,9 @@ module ListFn where
 length' []     = 0
 length' (_:xs) = 1 + length' xs
 
-take' 0 xs     = []
+take' 0 _      = []
 take' _ []     = []
-take' n (x:xs) = x:(take' (n - 1) xs)
+take' n (x:xs) = x : take' (n - 1) xs
 
 drop' 0 xs     = xs
 drop' _ []     = []
