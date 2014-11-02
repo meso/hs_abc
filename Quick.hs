@@ -1,5 +1,3 @@
-import Debug.Trace
-
 qsort []     = []
 qsort (n:xs) = qsort lt ++ [n] ++ qsort gteq
   where
