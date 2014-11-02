@@ -3,16 +3,16 @@ module ListFn where
 length' []     = 0
 length' (_:xs) = 1 + length' xs
 
-take' 0 x      = []
-take' n []     = []
+take' 0 xs     = []
+take' _ []     = []
 take' n (x:xs) = x:(take' (n - 1) xs)
 
-drop' 0 x      = x
-drop' n []     = []
+drop' 0 xs     = xs
+drop' _ []     = []
 drop' n (x:xs) = drop' (n - 1) xs
 
 reverse' []     = []
-reverse' (x:xs) = (reverse' xs) ++ [x]
+reverse' (x:xs) = reverse' xs ++ [x]
 
 sum' []      = 0
 sum' (x:xs)  = x + sum' xs
